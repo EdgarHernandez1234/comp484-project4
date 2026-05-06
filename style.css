@@ -160,6 +160,7 @@ body {
     padding-bottom: 1.25em;
     line-height: 1.8;
 }
+/* Here is where 28. Text Animation is implemented */
 #origin-text p span {
     transition: color 0.25s ease, opacity 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
