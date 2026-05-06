@@ -158,6 +158,50 @@ body {
 #origin-text p {
     margin: 0;
     padding-bottom: 1.25em;
+    line-height: 1.8;
+}
+#origin-text p span {
+    transition: color 0.25s ease, opacity 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.remaining-char { /* For whatever remains of the text */
+    color: #5d6b79;
+    opacity: 0.7;
+}
+
+/* Correctly typed characters are highlighted in green to provide positive feedback, while incorrectly typed characters are shown with a red background to clearly indicate errors, enhancing the user's ability to identify and correct mistakes. */
+.typed-correct {
+    color: #2bb673;
+    opacity: 1;
+}
+
+/* Correctly typed characters are highlighted in green to provide positive feedback, while incorrectly typed characters are shown with a red background to clearly indicate errors, enhancing the user's ability to identify and correct mistakes. */
+.typed-incorrect {
+    color: #ffffff;
+    background-color: #e95d0f;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+/* Correctly typed characters are highlighted in green to provide positive feedback, while incorrectly typed characters are shown with a red background to clearly indicate errors, enhancing the user's ability to identify and correct mistakes. */
+.current-char {
+    background-color: #d8e7ff;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px rgba(63, 125, 244, 0.2);
+    animation: currentPulse 1s ease-in-out infinite;
+}
+
+/* The current character being typed is highlighted with a subtle blue background and a pulsing animation to draw the user's attention, enhancing the typing experience. */
+@keyframes currentPulse { 
+    0% {
+        box-shadow: 0 0 0 0 rgba(63, 125, 244, 0.25);
+    }
+    50% {
+        box-shadow: 0 0 0 4px rgba(63, 125, 244, 0.15);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(63, 125, 244, 0.25);
+    }
 }
 
 .test-wrapper {
